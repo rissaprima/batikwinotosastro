@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prediksi Warna Remasol — Batik Winotosastro</title>
 <style>
@@ -13,34 +16,36 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:15px;line-height:1.45}
-h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;margin:0}
+body{background:var(--cream);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:14px;line-height:1.45;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-weight:600;margin:0;letter-spacing:-.01em}
 button,input,select{font:inherit;color:inherit}
-header{background:var(--dark);color:#f4ede0;padding:22px 20px}
+header{background:var(--dark);color:#f4ede0;padding:11px 20px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.brand small{display:block;letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:#d9c08a}
-.brand h1{font-size:24px;margin-top:2px}
+.brand small{display:block;letter-spacing:.2em;text-transform:uppercase;font-size:10px;color:#d9c08a}
+.brand h1{font-size:17px;margin-top:1px}
 .badge{font-size:12px;border:1px solid #d9c08a;color:#e9d9b4;padding:4px 10px;border-radius:999px}
 .goldline{height:4px;background:linear-gradient(90deg,var(--gold),#e3c88a,var(--gold))}
-main.wrap{padding:32px 16px 90px}
+main.wrap{padding:22px 16px 90px}
 .note{background:#fff6e0;border:1px solid #e6d09a;border-left:4px solid var(--gold);border-radius:10px;padding:10px 14px;font-size:13.5px;color:#5a4620;margin-top:18px}
-.grid{display:grid;grid-template-columns:400px 1fr;gap:18px;align-items:start}
-.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.grid{display:grid;grid-template-columns:400px 1fr;gap:18px;align-items:stretch}
+.left,.rcol{display:flex;flex-direction:column;min-width:0}
+.left>.card:last-child,.rcol>.card.right{flex:1}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:0 1px 2px rgba(23,22,20,.04)}
 .card + .card{margin-top:18px}
-.card h2{font-size:18px;margin-bottom:4px}
-.sub{color:var(--muted);font-size:13px;margin:0 0 12px}
-.row{display:grid;grid-template-columns:22px 1fr 84px 30px;gap:8px;align-items:center;padding:8px 0;border-top:1px dashed var(--line)}
+.card h2{font-size:15px;margin-bottom:2px}
+.sub{color:var(--muted);font-size:12.5px;margin:0 0 12px}
+.row{display:grid;grid-template-columns:22px 1fr 84px 30px;gap:6px 8px;align-items:center;padding:6px 0;border-top:1px dashed var(--line)}
 .row:first-of-type{border-top:none}
 .chip{width:22px;height:22px;border-radius:6px;border:1px solid rgba(0,0,0,.2)}
 select,input[type=number],input[type=text]{width:100%;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:#fff}
 input:focus,select:focus,button:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
 .row .slider{grid-column:2 / 4}
-.row .pct{grid-column:2 / 4;font-size:12px;color:var(--muted);margin-top:-4px}
+.row .pct{grid-column:4;font-size:11px;color:var(--muted);text-align:center}
 input[type=range]{width:100%;accent-color:var(--sogan)}
 .x{border:none;background:none;font-size:20px;color:var(--muted);cursor:pointer;border-radius:6px}
 .x:hover{color:var(--bad);background:#f3e3df}
-.btn{border:1px solid var(--sogan);background:var(--sogan);color:#fff;padding:8px 14px;border-radius:9px;cursor:pointer}
+.btn{border:1px solid var(--sogan);background:var(--sogan);color:#fff;padding:7px 13px;border-radius:8px;cursor:pointer;font-weight:500}
 .btn:hover{background:var(--sogan-d)}
 .btn.ghost{background:transparent;color:var(--sogan)}
 .btn.ghost:hover{background:#efe3cf}
@@ -53,16 +58,17 @@ input[type=range]{width:100%;accent-color:var(--sogan)}
 .presets{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
 
 .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.pane h3{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--sogan);margin-bottom:2px;font-family:system-ui,sans-serif;font-weight:700}
+.pane h3{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sogan);margin-bottom:2px;font-weight:700}
 .pane .cap{font-size:12.5px;color:var(--muted);margin:0 0 6px}
-canvas{width:100%;aspect-ratio:1/1;border-radius:12px;border:1px solid var(--line);display:block;background:#ddd;box-shadow:0 6px 18px rgba(60,35,15,.18)}
+canvas{width:100%;aspect-ratio:1/1;border-radius:12px;border:1px solid var(--line);display:block;background:#ddd;box-shadow:none}
+#cvBefore,#cvAfter{aspect-ratio:4/3;object-fit:cover}
 .swatchbar{display:flex;align-items:center;gap:10px;margin-top:8px}
 .flat{width:46px;height:30px;border-radius:7px;border:1px solid rgba(0,0,0,.2)}
 .hex{font-family:ui-monospace,Menlo,monospace;font-size:14px}
 
 .match{margin-top:16px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
-.de{font-family:Georgia,serif;font-size:42px;line-height:1;font-weight:600}
-.de small{display:block;font-size:12px;font-family:system-ui;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:4px}
+.de{font-size:38px;line-height:1;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.de small{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:4px}
 .bar{height:10px;border-radius:999px;background:linear-gradient(90deg,#3d7a4a 0%,#b9a53a 35%,#c9772a 65%,#a63a2e 100%);position:relative;margin:8px 0 6px}
 .bar i{position:absolute;top:-4px;width:4px;height:18px;background:var(--ink);border-radius:2px;transform:translateX(-2px);transition:left .25s}
 .verdict{font-weight:600}
@@ -80,12 +86,47 @@ summary{cursor:pointer;color:var(--sogan);font-weight:600}
 .assump li{margin:3px 0}
 footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 30px}
 .mini{display:none}
+
+.gear{border:1px solid #d9c08a;background:transparent;color:#e9d9b4;padding:4px 12px;border-radius:999px;cursor:pointer;font-size:12px}
+.gear:hover{background:rgba(255,255,255,.08)}
+.hdr-r{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.drop{border:1.5px dashed var(--gold);border-radius:12px;padding:8px 12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:#fbf9f6}
+.drop.over{background:#f1e7d3}
+#photo{aspect-ratio:auto;height:auto;object-fit:contain;cursor:crosshair;background:#eee;touch-action:manipulation;border-radius:10px;box-shadow:none}
+.steps{list-style:none;margin:0;padding:0;font-size:12px;display:flex;flex-wrap:wrap;gap:2px 12px}
+.steps li{display:flex;gap:4px;align-items:center;color:var(--muted)}
+.steps li.run{color:var(--ink)} .steps li.ok{color:var(--ok)} .steps li.err{color:var(--bad)}
+.steps li i{font-style:normal;width:12px;text-align:center}
+.steps li.run i{animation:spin 1s linear infinite;display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tg:not(.has){display:none}
+.tg.has{display:grid;grid-template-columns:150px 1fr;gap:12px;margin-top:10px;align-items:start}
+#photo{margin-top:0;max-height:150px;width:100%}
+.tg-side .sub{font-size:12px;margin:6px 0 0}
+.tg-side .box{font-size:12px;padding:6px 8px;margin-top:8px}
+.tg-side .btns{margin-top:6px}
+.pal{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pal button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:4px 8px 4px 4px;display:flex;gap:6px;align-items:center;cursor:pointer;font-size:12px}
+.pal button.on{outline:2px solid var(--sogan)}
+.pal b{display:block;width:26px;height:26px;border-radius:6px;border:1px solid rgba(0,0,0,.2)}
+.pal span{font-family:ui-monospace,Menlo,monospace}
+.mode{font-size:11px;border:1px solid var(--line);border-radius:999px;padding:2px 8px;color:var(--muted);vertical-align:middle;margin-left:6px;font-weight:500}
+.mode.ai{border-color:var(--ok);color:var(--ok)}
+.tstrip{margin-top:16px;border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fff}
+.ts-head{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap;justify-content:space-between;font-size:13.5px}
+.ts-head #tsV{font-weight:600}
+.ts-bar{display:flex;height:64px;border-radius:10px;overflow:hidden;margin-top:8px;border:1px solid rgba(0,0,0,.15)}
+.ts-bar div{flex:1;display:flex;align-items:flex-end;padding:6px 10px;font-size:12px}
+.ts-bar i{font-style:normal;font-family:ui-monospace,Menlo,monospace;margin-left:6px}
+dialog{border:1px solid var(--line);border-radius:14px;padding:18px;max-width:420px;width:calc(100% - 32px);background:var(--paper);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+dialog label{display:block;font-size:13px;color:var(--muted);margin-top:10px}
 @media (max-width:900px){
   main.wrap{padding-top:20px}
   .grid{grid-template-columns:1fr}
-  .right{order:-1}
+  .rcol{order:-1}
   .card + .card{margin-top:18px}
-  .brand h1{font-size:20px}
+  .brand h1{font-size:17px}
   .mini{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:10;gap:10px;align-items:center;justify-content:center;background:var(--dark);color:#fff;padding:8px 14px;font-size:13px;box-shadow:0 -4px 14px rgba(0,0,0,.25)}
   .mini .flat{width:34px;height:24px}
 }
@@ -94,7 +135,8 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
   .pane h3{font-size:11px;letter-spacing:.06em}
   .pane .cap{font-size:11.5px;min-height:2.7em}
   .match,.two{grid-template-columns:1fr}
-  .de{font-size:34px}
+  .tg.has{grid-template-columns:110px 1fr}
+  .de{font-size:32px}
 }
 </style>
 </head>
@@ -105,7 +147,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
       <small>Batik Winotosastro · Yogyakarta</small>
       <h1>Prediksi Campuran Warna Remasol</h1>
     </div>
-    <span class="badge">Prototype · Alat bantu produksi</span>
+    <div class="hdr-r"><span class="badge">Prototype · Alat bantu produksi</span><button class="gear" id="openSet" type="button">⚙ Pengaturan</button></div>
   </div>
 </header>
 <div class="goldline"></div>
@@ -114,9 +156,40 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
   <div class="grid">
     <!-- LEFT -->
     <div class="left">
+      <section class="card" id="tgtCard">
+        <h2>Target Customer <span class="mode" id="aiMode">Mode lokal</span></h2>
+        <p class="sub" style="margin-bottom:8px">Upload foto contoh kain/warna customer, lalu ketuk foto untuk ambil warna.</p>
+        <div class="drop" id="drop">
+          <input type="file" id="file" accept="image/*" hidden>
+          <button class="btn sm" id="pickFile" type="button">Upload / Foto</button>
+          <span class="sub" style="margin:0">atau tarik gambar ke sini</span>
+        </div>
+        <div class="tg" id="tg">
+          <div id="photoWrap" style="display:none"><canvas id="photo" aria-label="Foto target"></canvas></div>
+          <div class="tg-side">
+            <ul class="steps" id="steps"></ul>
+            <div class="pal" id="palette"></div>
+            <div class="btns" id="photoBtns" style="display:none">
+              <button class="btn ghost sm" id="wbBtn" type="button">Set titik putih</button>
+              <button class="btn ghost sm" id="wbClr" type="button" style="display:none">Hapus koreksi</button>
+              <button class="btn ghost sm" id="reAn" type="button">Analisis ulang</button>
+            </div>
+            <div class="sub" id="wbInfo">Ada kertas putih di foto? Klik “Set titik putih”, lalu ketuk kertasnya.</div>
+            <div class="box" id="aiNote" style="display:none"></div>
+          </div>
+        </div>
+        <div class="calrow" style="margin-top:12px">
+          <input type="color" id="tgtPicker" value="#2f5d7c" aria-label="Pilih warna target">
+          <input type="text" id="tgtHex" placeholder="#2F5D7C" maxlength="7" aria-label="HEX target">
+          <select id="pool" aria-label="Pewarna yang boleh dipakai" style="flex:1;min-width:130px;width:auto"><option value="all">Semua pewarna</option><option value="formula">Hanya pewarna di formula</option></select>
+          <button class="btn sm" id="findBtn" type="button">Cari formula</button>
+        </div>
+        <div class="sub" id="findInfo" style="margin:8px 0 0"></div>
+      </section>
+
       <section class="card">
         <h2>Formula Pewarna</h2>
-        <p class="sub">Pilih pewarna dan isi gramnya. Geser slider, preview langsung berubah.</p>
+        <p class="sub" style="margin-bottom:8px">Pilih pewarna dan isi gramnya. Preview langsung berubah.</p>
         <div class="presets" id="presets"></div>
         <div id="rows"></div>
         <div class="btns">
@@ -124,7 +197,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
           <button class="btn ghost" id="reset">Reset</button>
         </div>
         <div class="field">
-          <label for="batch"><span>Basis larutan / pasta (gram) — makin besar, warna makin pucat</span></label>
+          <label for="batch"><span>Basis larutan / pasta (gram)</span><b title="Makin besar, warna makin pucat">?</b></label>
           <input type="number" id="batch" min="50" step="50" value="1000">
         </div>
         <div class="totals">
@@ -142,30 +215,10 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
           </div>
         </details>
       </section>
-
-      <section class="card">
-        <h2>Kondisi Nglorod &amp; Jemur</h2>
-        <p class="sub">Atur sesuai proses di produksi. Dipakai untuk menghitung penurunan warna.</p>
-        <div class="field" style="margin-top:0">
-          <label for="temp"><span>Suhu air rebusan</span><b id="tempV">100 °C</b></label>
-          <input type="range" id="temp" min="80" max="100" step="1" value="100">
-        </div>
-        <div class="field">
-          <label for="mins"><span>Lama perebusan</span><b id="minsV">15 menit</b></label>
-          <input type="range" id="mins" min="3" max="45" step="1" value="15">
-        </div>
-        <div class="field">
-          <label for="uv"><span>Dijemur kena matahari</span><b id="uvV">4 jam</b></label>
-          <input type="range" id="uv" min="0" max="12" step="1" value="4">
-        </div>
-      </section>
-
-      <div class="note">
-    <b>Catatan:</b> hasil ini <b>estimasi digital</b>. Penurunan warna saat nglorod (rebus) dan jemur dihitung dari asumsi awal berdasarkan literatur umum pewarna reaktif, belum dikalibrasi dengan kain Winotosastro. Catat hasil swatch asli di bagian <b>Kalibrasi</b> supaya makin akurat, dan tetap lakukan <b>validasi physical swatch</b>.
-  </div>
     </div>
 
     <!-- RIGHT -->
+    <div class="rcol">
     <section class="card right">
       <h2>Sebelum vs Sesudah Nglorod</h2>
       <p class="sub">Dua-duanya di kain mori polos. Kanan sudah memperhitungkan rebusan dan jemur.</p>
@@ -183,6 +236,11 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
           <canvas id="cvAfter"></canvas>
           <div class="swatchbar"><div class="flat" id="flatAfter"></div><span class="hex" id="hexAfter"></span></div>
         </div>
+      </div>
+
+      <div class="tstrip" id="tgtStrip" style="display:none">
+        <div class="ts-head"><b>Target customer vs Sesudah Nglorod</b><span id="tsV"></span><span>ΔE <b id="tsDe">0</b></span></div>
+        <div class="ts-bar"><div id="tsT"><span>Target<i id="tsTH"></i></span></div><div id="tsA"><span>Sesudah<i id="tsAH"></i></span></div></div>
       </div>
 
       <div class="match">
@@ -212,9 +270,11 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
         </div>
       </div>
 
-      <h3 style="margin-top:18px;font-size:16px">Formula yang dipakai</h3>
-      <div class="box formula" id="formulaText"></div>
-      <div class="btns"><button class="btn ghost sm" id="copy">Salin formula</button><span id="copied" class="sub" style="align-self:center;margin:0"></span></div>
+      <details>
+        <summary>Formula dalam bentuk teks (untuk disalin)</summary>
+        <div class="box formula" id="formulaText"></div>
+        <div class="btns"><button class="btn ghost sm" id="copy">Salin formula</button><span id="copied" class="sub" style="align-self:center;margin:0"></span></div>
+      </details>
 
       <details>
         <summary>Asumsi model (baca dulu sebelum dipercaya)</summary>
@@ -227,8 +287,49 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
         </ul>
       </details>
     </section>
+
+      <section class="card">
+        <h2>Kondisi Nglorod &amp; Jemur</h2>
+        <p class="sub">Atur sesuai proses di produksi. Dipakai untuk menghitung penurunan warna.</p>
+        <div class="field" style="margin-top:0">
+          <label for="temp"><span>Suhu air rebusan</span><b id="tempV">100 °C</b></label>
+          <input type="range" id="temp" min="80" max="100" step="1" value="100">
+        </div>
+        <div class="field">
+          <label for="mins"><span>Lama perebusan</span><b id="minsV">15 menit</b></label>
+          <input type="range" id="mins" min="3" max="45" step="1" value="15">
+        </div>
+        <div class="field">
+          <label for="uv"><span>Dijemur kena matahari</span><b id="uvV">4 jam</b></label>
+          <input type="range" id="uv" min="0" max="12" step="1" value="4">
+        </div>
+      </section>
+
+
+    </div>
+  </div>
+
+  <div class="note">
+    <b>Catatan:</b> hasil ini <b>estimasi digital</b>. Penurunan warna saat nglorod (rebus) dan jemur dihitung dari asumsi awal berdasarkan literatur umum pewarna reaktif, belum dikalibrasi dengan kain Winotosastro. Warna dari foto juga perkiraan (cahaya dan layar bisa menggeser warna). Catat hasil swatch asli di bagian <b>Kalibrasi</b> supaya makin akurat, dan tetap lakukan <b>validasi physical swatch</b>.
   </div>
 </main>
+
+<dialog id="setDlg">
+  <form method="dialog">
+    <h3>Pengaturan</h3>
+    <p class="sub" style="margin-top:6px">Analisis AI bersifat opsional. Tanpa API key, tool memakai ekstraksi warna lokal (gratis).</p>
+    <label for="apiKey">API key Anthropic</label>
+    <input type="password" id="apiKey" autocomplete="off" placeholder="sk-ant-...">
+    <label for="apiModel">Model</label>
+    <input type="text" id="apiModel" placeholder="claude-sonnet-4-5">
+    <p class="sub" style="margin-top:10px">Key hanya disimpan di browser perangkat ini. Saat analisis, foto dikirim ke API. Jangan simpan key di perangkat bersama.</p>
+    <div class="btns">
+      <button class="btn" id="saveSet" value="ok">Simpan</button>
+      <button class="btn ghost" id="clrSet" type="button">Hapus key</button>
+      <button class="btn ghost" value="cancel">Tutup</button>
+    </div>
+  </form>
+</dialog>
 
 <div class="mini">
   <div class="flat" id="miniB"></div><span>Sebelum</span>
@@ -339,7 +440,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
   function drawCloth(cv,hex){
     if(fabric){
       const {W,H,Y,out}=fabric;
-      if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H;cv.style.aspectRatio=W+'/'+H}
+      if(cv.width!==W||cv.height!==H){cv.width=W;cv.height=H}
       const lin=hexLin(hex),o=out.data;
       for(let i=0,n=W*H;i<n;i++){
         const y=Y[i],j=i*4;
@@ -388,7 +489,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
   function update(){
     const total=totalG(),conc=total/state.batch*1000;
     $('total').textContent=+total.toFixed(1);$('conc').textContent=+conc.toFixed(1);
-    state.rows.forEach(r=>{if(r._pct)r._pct.textContent=total>0?`${(r.g/total*100).toFixed(0)}% dari total pewarna`:''});
+    state.rows.forEach(r=>{if(r._pct)r._pct.textContent=total>0?`${(r.g/total*100).toFixed(0)}%`:''});
     $('tempV').textContent=state.temp+' °C';$('minsV').textContent=state.mins+' menit';$('uvV').textContent=state.uv+' jam';
 
     const calib=calFactor(),ret=retention(conc,calib);
@@ -396,6 +497,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
     after=total>0?afterHex(calib):before;
     drawCloth($('cvBefore'),before);drawCloth($('cvAfter'),after);
     $('flatBefore').style.background=before;$('hexBefore').textContent=before.toUpperCase();
+    updateTargetStrip(after);
     $('flatAfter').style.background=after;$('hexAfter').textContent=after.toUpperCase();
     $('miniB').style.background=before;$('miniA').style.background=after;
     $('capAfter').textContent=total>0?`≈ ${(100*(1-ret.keep)).toFixed(0)}% pewarna hilang (rebus + jemur)`:'Setelah rebus & jemur';
@@ -446,6 +548,257 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
     if(!rows.length)return 'Belum ada pewarna yang diisi.';
     const lines=rows.map(r=>`• ${dyes.find(x=>x.id===r.dye).name.padEnd(10)} ${String(+r.g.toFixed(1)).padStart(6)} g  (${(r.g/total*100).toFixed(0)}%)`);
     return lines.join('\n')+`\n──────────────────────────\nTotal pewarna : ${+total.toFixed(1)} g\nBasis larutan : ${state.batch} g  (${+(total/state.batch*1000).toFixed(1)} g/kg)\nNglorod       : ${state.temp} °C, ${state.mins} menit\nJemur         : ${state.uv} jam\nSebelum       : ${before.toUpperCase()}\nSesudah       : ${after.toUpperCase()}  (ΔE ${de.toFixed(1)}, ±${((1-ret.keep)*100).toFixed(0)}% pewarna hilang)`;
+  }
+
+
+  /* ---- target dari foto ---- */
+  const T={ready:false,src:null,wb:[1,1,1],pickWB:false,tap:null,palette:[],busy:false,sel:null};
+  state.target=null;
+  const wait=ms=>new Promise(r=>setTimeout(r,ms));
+  const lumOf=hex=>{const l=hexLin(hex);return .2126*l[0]+.7152*l[1]+.0722*l[2]};
+  const cfgGet=()=>{try{return JSON.parse(localStorage.getItem('dye_ai')||'{}')||{}}catch(e){return {}}};
+  const cfgSet=o=>{try{localStorage.setItem('dye_ai',JSON.stringify(o))}catch(e){}};
+  const aiOn=()=>!!(cfgGet().key);
+  function refreshMode(){const m=$('aiMode');m.textContent=aiOn()?'Mode AI':'Mode lokal';m.className='mode'+(aiOn()?' ai':'')}
+
+  function setTarget(hex,run){
+    state.target=normHex(hex);
+    $('tgtPicker').value=state.target;$('tgtHex').value=state.target.toUpperCase();
+    if(run!==false)update();
+  }
+  function verdictOf(de){
+    return de<2?'Hampir identik':de<5?'Sangat dekat — layak dicoba di swatch':de<10?'Cukup mirip':de<20?'Terlihat beda':'Jauh dari target';
+  }
+  function updateTargetStrip(afterHexV){
+    const el=$('tgtStrip');
+    if(!state.target){el.style.display='none';return}
+    el.style.display='';
+    const d=deltaE(hexToLab(state.target),hexToLab(afterHexV));
+    $('tsDe').textContent=d.toFixed(1);$('tsV').textContent=verdictOf(d);
+    const t=$('tsT'),a=$('tsA');t.style.background=state.target;a.style.background=afterHexV;
+    t.style.color=lumOf(state.target)>.35?'#171614':'#fff';a.style.color=lumOf(afterHexV)>.35?'#171614':'#fff';
+    $('tsTH').textContent=state.target.toUpperCase();$('tsAH').textContent=afterHexV.toUpperCase();
+  }
+
+  /* k-means kecil untuk palet warna */
+  function kmeans(px,k,iters){
+    let seed=7;const rnd=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296};
+    const n=px.length;if(!n)return null;
+    const cen=[px[(rnd()*n)|0].slice()];
+    while(cen.length<k){
+      const d2=px.map(p=>Math.min(...cen.map(c=>(p[0]-c[0])**2+(p[1]-c[1])**2+(p[2]-c[2])**2)));
+      let sum=d2.reduce((a,b)=>a+b,0),r=rnd()*sum,i=0;
+      if(sum===0)break;
+      for(;i<n-1;i++){r-=d2[i];if(r<=0)break}
+      cen.push(px[i].slice());
+    }
+    const as=new Int16Array(n);
+    for(let it=0;it<iters;it++){
+      const acc=cen.map(()=>[0,0,0,0]);
+      for(let i=0;i<n;i++){
+        let b=0,bd=1e12;
+        for(let c=0;c<cen.length;c++){const d=(px[i][0]-cen[c][0])**2+(px[i][1]-cen[c][1])**2+(px[i][2]-cen[c][2])**2;if(d<bd){bd=d;b=c}}
+        as[i]=b;const a=acc[b];a[0]+=px[i][0];a[1]+=px[i][1];a[2]+=px[i][2];a[3]++;
+      }
+      cen.forEach((c,j)=>{const a=acc[j];if(a[3]){c[0]=a[0]/a[3];c[1]=a[1]/a[3];c[2]=a[2]/a[3]}});
+    }
+    return {cen,as};
+  }
+
+  function extractPalette(box){
+    const SW=T.src.width,SH=T.src.height;
+    const bx=box?{x:box.x*SW,y:box.y*SH,w:box.w*SW,h:box.h*SH}:{x:0,y:0,w:SW,h:SH};
+    const sc=Math.min(1,110/Math.max(bx.w,bx.h)),W=Math.max(8,Math.round(bx.w*sc)),H=Math.max(8,Math.round(bx.h*sc));
+    const c=document.createElement('canvas');c.width=W;c.height=H;
+    c.getContext('2d').drawImage(T.src,bx.x,bx.y,bx.w,bx.h,0,0,W,H);
+    const d=c.getContext('2d').getImageData(0,0,W,H).data,px=[],pos=[];
+    for(let y=0;y<H;y++)for(let x=0;x<W;x++){
+      const i=(y*W+x)*4;px.push([clamp(d[i]*T.wb[0],0,255),clamp(d[i+1]*T.wb[1],0,255),clamp(d[i+2]*T.wb[2],0,255)]);pos.push([x/W,y/H]);
+    }
+    const km=kmeans(px,5,12);if(!km)return[];
+    // gabung cluster yang nyaris sama (ΔE<7) SEBELUM mendeteksi latar
+    const K0=km.cen.length,labs=km.cen.map(c=>hexToLab(rgbToHex(c))),grp=[...Array(K0).keys()];
+    const fnd=i=>grp[i]===i?i:(grp[i]=fnd(grp[i]));
+    for(let i=0;i<K0;i++)for(let j=i+1;j<K0;j++)if(deltaE(labs[i],labs[j])<7)grp[fnd(j)]=fnd(i);
+    const ids=[...new Set(km.cen.map((_,i)=>fnd(i)))],K=ids.length,idx=new Map(ids.map((g,i)=>[g,i]));
+    const cnt=new Array(K).fill(0),bor=new Array(K).fill(0),mid=new Array(K).fill(0),sum=ids.map(()=>[0,0,0]);let nb=0,nm=0;
+    for(let i=0;i<px.length;i++){
+      const [x,y]=pos[i],a=idx.get(fnd(km.as[i]));cnt[a]++;
+      sum[a][0]+=px[i][0];sum[a][1]+=px[i][1];sum[a][2]+=px[i][2];
+      if(x<.07||x>.93||y<.07||y>.93){bor[a]++;nb++}
+      if(x>.3&&x<.7&&y>.3&&y<.7){mid[a]++;nm++}
+    }
+    let bg=-1;
+    if(!box&&K>1){
+      let bi=0;for(let j=1;j<K;j++)if(bor[j]>bor[bi])bi=j;
+      if(bor[bi]/Math.max(1,nb)>.5&&mid[bi]/Math.max(1,nm)<.5)bg=bi;
+    }
+    const list=ids.map((_,j)=>({rgb:sum[j].map(v=>v/Math.max(1,cnt[j])),n:cnt[j]})).filter((o,j)=>j!==bg&&o.n>0);
+    const tot=list.reduce((s,o)=>s+o.n,0)||1;
+    return list.map(o=>({hex:rgbToHex(o.rgb),share:o.n/tot})).filter(o=>o.share>=.03).sort((a,b)=>b.share-a.share);
+  }
+
+  function renderPalette(){
+    const box=$('palette');box.innerHTML='';
+    T.palette.forEach(p=>{
+      const b=document.createElement('button');b.type='button';b.className=(state.target===p.hex)?'on':'';
+      b.innerHTML=`<b style="background:${p.hex}"></b><span>${p.hex.toUpperCase()}</span><em style="font-style:normal;color:var(--muted)">${Math.round(p.share*100)}%</em>`;
+      b.onclick=()=>{setTarget(p.hex);renderPalette()};
+      box.appendChild(b);
+    });
+  }
+
+  const STEPS=['Membaca gambar','Mendeteksi area kain','Mengekstrak warna','Mencari formula'];
+  function renderSteps(st,labels){
+    $('steps').innerHTML=STEPS.map((t,i)=>{
+      const s=st[i]||'';const ic=s==='ok'?'✓':s==='run'?'◌':s==='err'?'✕':'○';
+      return `<li class="${s}"><i>${ic}</i>${esc(labels&&labels[i]||t)}</li>`;
+    }).join('');
+  }
+  function renderPhoto(){
+    const c=$('photo'),ctx=c.getContext('2d');
+    if(c.width!==T.src.width||c.height!==T.src.height){c.width=T.src.width;c.height=T.src.height}
+    ctx.drawImage(T.src,0,0);
+    if(T.tap){
+      const r=Math.max(8,c.width/60);
+      ctx.lineWidth=3;ctx.strokeStyle='#fff';ctx.beginPath();ctx.arc(T.tap.x,T.tap.y,r,0,7);ctx.stroke();
+      ctx.lineWidth=1.5;ctx.strokeStyle='#171614';ctx.beginPath();ctx.arc(T.tap.x,T.tap.y,r+2,0,7);ctx.stroke();
+    }
+  }
+  function patchAvg(x,y){
+    const ctx=T.src.getContext('2d'),r=5,x0=clamp(Math.round(x)-r,0,T.src.width-1),y0=clamp(Math.round(y)-r,0,T.src.height-1);
+    const w=Math.min(2*r+1,T.src.width-x0),h=Math.min(2*r+1,T.src.height-y0);
+    const d=ctx.getImageData(x0,y0,w,h).data;let s=[0,0,0],n=0;
+    for(let i=0;i<d.length;i+=4){s[0]+=d[i];s[1]+=d[i+1];s[2]+=d[i+2];n++}
+    return s.map(v=>v/n);
+  }
+
+  function loadPhoto(file){
+    if(!file||!/^image\//.test(file.type))return;
+    const url=URL.createObjectURL(file),img=new Image();
+    img.onload=()=>{
+      const M=1024,sc=Math.min(1,M/Math.max(img.naturalWidth,img.naturalHeight));
+      const c=document.createElement('canvas');c.width=Math.round(img.naturalWidth*sc);c.height=Math.round(img.naturalHeight*sc);
+      c.getContext('2d').drawImage(img,0,0,c.width,c.height);
+      T.src=c;T.ready=true;T.wb=[1,1,1];T.tap=null;T.palette=[];T.pickWB=false;
+      URL.revokeObjectURL(url);
+      $('photoWrap').style.display='';$('tg').classList.add('has');$('photoBtns').style.display='';$('wbClr').style.display='none';
+      renderPhoto();analyze();
+    };
+    img.onerror=()=>{$('findInfo').textContent='Gambar tidak bisa dibaca. Coba format JPG atau PNG.'};
+    img.src=url;
+  }
+
+  /* ---- AI (opsional) ---- */
+  const AI_PROMPT=`Kamu membantu produksi batik di Yogyakarta. Foto ini berisi contoh kain atau warna dari customer.
+Tugas:
+1) Tentukan kotak area kain/warna yang relevan (abaikan latar, meja, kertas, tangan, label, bayangan) dalam koordinat relatif 0-1: x,y = pojok kiri atas, w,h = lebar dan tinggi.
+2) Perkirakan warna dasar dominan kain dalam HEX, dan maksimal 3 warna sekunder (misalnya motif) dengan label singkat berbahasa Indonesia.
+3) Tulis deskripsi warna 1 kalimat dalam bahasa Indonesia.
+4) Tulis catatan kondisi foto jika ada masalah (terlalu gelap/kuning/silau/tanpa pembanding putih), kalau tidak ada tulis "".
+Balas HANYA dengan JSON valid persis format ini, tanpa teks lain:
+{"box":{"x":0,"y":0,"w":1,"h":1},"ground_hex":"#RRGGBB","others":[{"hex":"#RRGGBB","label":""}],"description":"","photo_note":""}`;
+  async function callAI(){
+    const cfg=cfgGet(),model=(cfg.model||'claude-sonnet-4-5').trim();
+    const b64=T.src.toDataURL('image/jpeg',0.85).split(',')[1];
+    const res=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'content-type':'application/json','x-api-key':cfg.key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model,max_tokens:700,messages:[{role:'user',content:[
+        {type:'image',source:{type:'base64',media_type:'image/jpeg',data:b64}},
+        {type:'text',text:AI_PROMPT}]}]})
+    });
+    if(!res.ok){const t=await res.text();throw new Error('API '+res.status+': '+t.slice(0,140))}
+    const j=await res.json(),txt=(j.content||[]).map(c=>c.text||'').join(''),m=txt.match(/\{[\s\S]*\}/);
+    if(!m)throw new Error('Jawaban AI tidak berformat JSON');
+    const o=JSON.parse(m[0]);
+    const b=o.box||{};let box=null;
+    if([b.x,b.y,b.w,b.h].every(v=>typeof v==='number')&&b.w>.05&&b.h>.05){
+      const x=clamp(b.x,0,.95),y=clamp(b.y,0,.95);box={x,y,w:clamp(b.w,.05,1-x),h:clamp(b.h,.05,1-y)};
+    }
+    return {box,ground:validHex(o.ground_hex||'')?normHex(o.ground_hex):null,others:Array.isArray(o.others)?o.others.filter(z=>z&&validHex(z.hex||'')).slice(0,3):[],description:String(o.description||''),note:String(o.photo_note||'')};
+  }
+
+  async function analyze(){
+    if(!T.ready||T.busy)return;T.busy=true;
+    const st=[],labels=[];const set=(i,v)=>{st[i]=v;renderSteps(st,labels)};
+    let ai=null,aiErr='';
+    labels[1]=aiOn()?'Mendeteksi area kain (AI)':'Mendeteksi area kain';
+    renderSteps(st,labels);
+    set(0,'run');await wait(250);set(0,'ok');
+    set(1,'run');
+    if(aiOn()){try{ai=await callAI()}catch(e){aiErr=e.message||String(e)}}
+    else await wait(300);
+    set(1,aiErr?'err':'ok');
+    set(2,'run');await wait(200);
+    T.palette=extractPalette(ai&&ai.box);
+    if(ai&&ai.ground&&T.palette.length){
+      const gl=hexToLab(ai.ground);
+      T.palette.sort((a,b)=>deltaE(hexToLab(a.hex),gl)-deltaE(hexToLab(b.hex),gl)||b.share-a.share);
+    }
+    if(T.palette.length){setTarget(T.palette[0].hex,false)}
+    renderPalette();set(2,T.palette.length?'ok':'err');
+    set(3,'run');await wait(150);
+    if(state.target)findFormula();
+    set(3,state.target?'ok':'err');
+    // catatan hasil
+    const n=$('aiNote'),parts=[];
+    if(ai){
+      if(ai.description)parts.push('<b>Hasil analisis AI:</b> '+esc(ai.description));
+      if(ai.others.length)parts.push('Warna lain: '+ai.others.map(o=>`<span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${normHex(o.hex)};border:1px solid rgba(0,0,0,.25)"></span> ${esc(String(o.label||''))} ${normHex(o.hex).toUpperCase()}`).join(' · '));
+      if(ai.note)parts.push('Catatan foto: '+esc(ai.note));
+    }else if(aiErr){
+      parts.push('<span style="color:var(--bad)">Analisis AI gagal ('+esc(aiErr)+'). Memakai ekstraksi lokal.</span>');
+    }else{
+      parts.push('Mode lokal: warna dihitung dari piksel foto. API key bisa diisi di Pengaturan.');
+    }
+    n.innerHTML=parts.join('<br>');n.style.display='';
+    T.busy=false;
+  }
+
+  /* ---- cari formula (optimizer) ---- */
+  function afterOfRows(rows,calib){
+    const tot=rows.reduce((s,r)=>s+(r.g||0),0),conc=tot/state.batch*1000;
+    return predict(rows,state.batch,retention(conc,calib).keep);
+  }
+  function findFormula(){
+    if(!state.target)return null;
+    const tl=hexToLab(state.target),calib=calFactor();
+    const pool=($('pool').value==='formula'&&state.rows.length)?[...new Set(state.rows.map(r=>r.dye))]:dyes.map(d=>d.id);
+    const P=pool.length,MAXG=150;
+    const mk=g=>pool.map((id,i)=>({dye:id,g:g[i]}));
+    const raw=g=>deltaE(tl,hexToLab(afterOfRows(mk(g),calib)));
+    const cost=g=>raw(g)+0.35*g.filter(v=>v>0.4).length+0.004*g.reduce((a,b)=>a+b,0);
+    const descend=(g,steps)=>{
+      let best=cost(g);
+      for(const step of steps){
+        let improved=true,guard=0;
+        while(improved&&guard++<60){
+          improved=false;
+          for(let i=0;i<P;i++)for(const dir of [1,-1]){
+            const old=g[i],nv=clamp(+(old+dir*step).toFixed(2),0,MAXG);if(nv===old)continue;
+            g[i]=nv;const c=cost(g);
+            if(c<best-1e-4){best=c;improved=true}else g[i]=old;
+          }
+        }
+      }
+      return best;
+    };
+    let bestG=null,bestC=1e9;
+    const starts=pool.map((_,i)=>{const g=new Array(P).fill(0);g[i]=20;return g});
+    const cur=new Array(P).fill(0);state.rows.forEach(r=>{const i=pool.indexOf(r.dye);if(i>=0)cur[i]+=r.g||0});
+    if(cur.some(v=>v>0))starts.push(cur);
+    for(const g0 of starts){const g=g0.slice(),c=descend(g,[16,8,4,2,1,.5]);if(c<bestC){bestC=c;bestG=g}}
+    bestG=bestG.map(v=>v<1?0:v);
+    descend(bestG,[1,.5]);
+    bestG=bestG.map(v=>v<1?0:Math.round(v*2)/2);
+    const rows=mk(bestG).filter(r=>r.g>0).sort((a,b)=>b.g-a.g);
+    if(!rows.length){$('findInfo').textContent='Tidak ketemu formula yang cocok dengan target ini.';return null}
+    state.rows=rows.map(r=>({dye:r.dye,g:r.g}));
+    renderRows();update();
+    const de=deltaE(tl,hexToLab(after));
+    $('findInfo').innerHTML=`Formula ditemukan: selisih ke target ΔE <b>${de.toFixed(1)}</b>.`+(de>8?' Target agak di luar jangkauan pewarna yang ada; coba tambah warna di Database warna atau pilih “Semua pewarna”.':'');
+    return de;
   }
 
   /* ---- kalibrasi ---- */
@@ -501,6 +854,37 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
       dyes.push({id:'c'+Date.now(),name,hex:$('newHex').value,k:1});
       $('newName').value='';renderDyeList();renderRows();update();
     };
+    refreshMode();
+    $('openSet').onclick=()=>{const c=cfgGet();$('apiKey').value=c.key||'';$('apiModel').value=c.model||'';$('setDlg').showModal()};
+    $('saveSet').onclick=()=>{cfgSet({key:$('apiKey').value.trim(),model:$('apiModel').value.trim()});refreshMode()};
+    $('clrSet').onclick=()=>{cfgSet({});$('apiKey').value='';refreshMode()};
+    $('pickFile').onclick=()=>$('file').click();
+    $('file').onchange=e=>{loadPhoto(e.target.files[0]);e.target.value=''};
+    const dz=$('drop');
+    ['dragenter','dragover'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add('over')}));
+    ['dragleave','drop'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove('over')}));
+    dz.addEventListener('drop',e=>loadPhoto(e.dataTransfer.files[0]));
+    $('photo').addEventListener('pointerdown',e=>{
+      if(!T.ready)return;
+      const c=$('photo'),r=c.getBoundingClientRect(),x=(e.clientX-r.left)*c.width/r.width,y=(e.clientY-r.top)*c.height/r.height,avg=patchAvg(x,y);
+      if(T.pickWB){
+        T.wb=avg.map(v=>clamp(235/Math.max(v,1),.6,1.8));T.pickWB=false;
+        $('wbBtn').textContent='Set titik putih';$('wbClr').style.display='';
+        $('wbInfo').textContent='Koreksi putih aktif. Warna yang diambil sudah disesuaikan.';
+        T.tap=null;renderPhoto();
+        T.palette=extractPalette(null);renderPalette();
+        return;
+      }
+      T.tap={x,y};renderPhoto();
+      setTarget(rgbToHex(avg.map((v,i)=>v*T.wb[i])));renderPalette();
+    });
+    $('wbBtn').onclick=()=>{T.pickWB=!T.pickWB;$('wbBtn').textContent=T.pickWB?'Ketuk area putih di foto…':'Set titik putih'};
+    $('wbClr').onclick=()=>{T.wb=[1,1,1];$('wbClr').style.display='none';$('wbInfo').textContent='Koreksi putih dihapus.';T.palette=extractPalette(null);renderPalette()};
+    $('reAn').onclick=analyze;
+    $('tgtPicker').oninput=e=>{setTarget(e.target.value);renderPalette()};
+    $('tgtHex').oninput=e=>{if(validHex(e.target.value)){setTarget(e.target.value);renderPalette()}};
+    $('tgtHex').onblur=e=>{if(state.target)e.target.value=state.target.toUpperCase()};
+    $('findBtn').onclick=()=>{if(!state.target){$('findInfo').textContent='Pilih atau upload warna target dulu.';return}findFormula()};
     renderDyeList();renderRows();update();loadFabric(update);
     let t;window.addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(update,120)});
   }
