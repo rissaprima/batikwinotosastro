@@ -21,7 +21,7 @@ h1,h2,h3{font-weight:600;margin:0;letter-spacing:-.01em}
 button,input,select{font:inherit;color:inherit}
 header{background:var(--dark);color:#f4ede0;padding:11px 20px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 16px}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:nowrap}
 .brand small{display:block;letter-spacing:.2em;text-transform:uppercase;font-size:10px;color:#d9c08a}
 .brand h1{font-size:17px;margin-top:1px}
 .badge{font-size:12px;border:1px solid #d9c08a;color:#e9d9b4;padding:4px 10px;border-radius:999px}
@@ -87,8 +87,8 @@ summary{cursor:pointer;color:var(--sogan);font-weight:600}
 footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 30px}
 .mini{display:none}
 
-.gear{border:1px solid #d9c08a;background:transparent;color:#e9d9b4;padding:4px 12px;border-radius:999px;cursor:pointer;font-size:12px}
-.gear:hover{background:rgba(255,255,255,.08)}
+.gear{border:none;background:transparent;color:#d9c08a;padding:6px 8px;border-radius:8px;cursor:pointer;font-size:13px;white-space:nowrap;flex:none}
+.gear:hover{background:rgba(255,255,255,.08);color:#f4ede0}
 .hdr-r{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .drop{border:1.5px dashed var(--gold);border-radius:12px;padding:8px 12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:#fbf9f6}
 .drop.over{background:#f1e7d3}
@@ -126,11 +126,14 @@ dialog label{display:block;font-size:13px;color:var(--muted);margin-top:10px}
   .grid{grid-template-columns:1fr}
   .rcol{order:-1}
   .card + .card{margin-top:18px}
-  .brand h1{font-size:17px}
+  .brand h1{font-size:15px}
+  header{padding:11px 4px}
   .mini{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:10;gap:10px;align-items:center;justify-content:center;background:var(--dark);color:#fff;padding:8px 14px;font-size:13px;box-shadow:0 -4px 14px rgba(0,0,0,.25)}
   .mini .flat{width:34px;height:24px}
 }
 @media (max-width:520px){
+  .gear .gt{display:none}
+  .gear{font-size:18px;padding:4px 8px}
   .compare{gap:8px}
   .pane h3{font-size:11px;letter-spacing:.06em}
   .pane .cap{font-size:11.5px;min-height:2.7em}
@@ -147,7 +150,7 @@ dialog label{display:block;font-size:13px;color:var(--muted);margin-top:10px}
       <small>Batik Winotosastro · Yogyakarta</small>
       <h1>Prediksi Campuran Warna Remasol</h1>
     </div>
-    <div class="hdr-r"><span class="badge">Prototype · Alat bantu produksi</span><button class="gear" id="openSet" type="button">⚙ Pengaturan</button></div>
+    <button class="gear" id="openSet" type="button" aria-label="Pengaturan">⚙<span class="gt"> Pengaturan</span></button>
   </div>
 </header>
 <div class="goldline"></div>
