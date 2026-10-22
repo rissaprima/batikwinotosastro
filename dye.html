@@ -24,7 +24,7 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .badge{font-size:12px;border:1px solid #d9c08a;color:#e9d9b4;padding:4px 10px;border-radius:999px}
 .goldline{height:4px;background:linear-gradient(90deg,var(--gold),#e3c88a,var(--gold))}
 main{padding:20px 16px 90px;margin-top:6px}
-.note{background:#fff6e0;border:1px solid #e6d09a;border-left:4px solid var(--gold);border-radius:10px;padding:10px 14px;font-size:13.5px;color:#5a4620;margin-bottom:18px}
+.note{background:#fff6e0;border:1px solid #e6d09a;border-left:4px solid var(--gold);border-radius:10px;padding:10px 14px;font-size:13.5px;color:#5a4620;margin-top:18px}
 .grid{display:grid;grid-template-columns:400px 1fr;gap:18px;align-items:start}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
 .card + .card{margin-top:18px}
@@ -110,10 +110,6 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
 <div class="goldline"></div>
 
 <main class="wrap">
-  <div class="note">
-    <b>Catatan:</b> hasil ini <b>estimasi digital</b>. Penurunan warna saat nglorod (rebus) dan jemur dihitung dari asumsi awal berdasarkan literatur umum pewarna reaktif, belum dikalibrasi dengan kain Winotosastro. Catat hasil swatch asli di bagian <b>Kalibrasi</b> supaya makin akurat, dan tetap lakukan <b>validasi physical swatch</b>.
-  </div>
-
   <div class="grid">
     <!-- LEFT -->
     <div class="left">
@@ -162,6 +158,10 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:10px 16px 3
           <input type="range" id="uv" min="0" max="12" step="1" value="4">
         </div>
       </section>
+
+      <div class="note">
+    <b>Catatan:</b> hasil ini <b>estimasi digital</b>. Penurunan warna saat nglorod (rebus) dan jemur dihitung dari asumsi awal berdasarkan literatur umum pewarna reaktif, belum dikalibrasi dengan kain Winotosastro. Catat hasil swatch asli di bagian <b>Kalibrasi</b> supaya makin akurat, dan tetap lakukan <b>validasi physical swatch</b>.
+  </div>
     </div>
 
     <!-- RIGHT -->
